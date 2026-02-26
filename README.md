@@ -79,3 +79,15 @@ If you are a web developer who wants to tinker with a slick, dark-mode, system-l
 3. Run `npm install` to download the Express, React, and SystemInformation dependencies.
 4. Run `npm run dev` to boot both the frontend and backend servers concurrently.
 5. Open your web browser to `http://localhost:5173`.
+
+---
+
+## ⚠️ Disclaimer & Safety Warning
+
+**Please read before using:**
+This application interacts directly with your Windows Operating System's low-level power configurations and file system. 
+
+* **Beast Mode:** Unlocks the "Ultimate Performance" power plan which bypasses standard thermal and power throttling. **Use with caution on laptops**, as it will generate significantly more heat and drain the battery faster. Ensure your device has adequate cooling.
+* **Junk Cleaner:** Permanently deletes files from your `%TEMP%` and `C:\Windows\Temp` directories. While these are safe to delete in 99% of cases, do not run this tool while installing major software or system updates.
+
+> By using SysOptimizer, you understand that modifying system power states and deleting system files carries inherent risks. The creators of this tool are not responsible for any hardware degradation, data loss, or system instability. Use responsibly!

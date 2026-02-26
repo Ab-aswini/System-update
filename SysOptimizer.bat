@@ -25,6 +25,9 @@ echo ===========================================================================
 echo                             SysOptimizer v1.0
 echo                     Native Windows Performance Tuner
 echo ===============================================================================
+echo  WARNING: Modifying power plans and deleting files carries inherent risks.
+echo  Use Beast Mode with adequate cooling. The creators assume no liability.
+echo ===============================================================================
 echo.
 
 :: --- Live Quick Stats ---
