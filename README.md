@@ -17,21 +17,31 @@ graph TD
     Decision -- "No (Everyday User)" --> CLI[Native Windows CLI]
     Decision -- "Yes (Developer)" --> Web[Web Dashboard Architecture]
 
-    subgraph Native Windows CLI (Zero Dependencies)
-        CLI --> BatExec[Run SysOptimizer.bat as Admin]
-        BatExec --> ASCII[Interactive ASCII Terminal UI]
-        ASCII <--> WMI[Polls WMI for Live CPU/RAM Stats]
-        ASCII --> Tweak1[Executes powercfg commands]
-        ASCII --> Clean[Flushes DNS & Deletes Temp Files]
+    subgraph CLI[Native Windows CLI]
+        BatExec[Run SysOptimizer.bat as Admin]
+        ASCII[Interactive ASCII Terminal UI]
+        WMI[Polls WMI for Live CPU/RAM Stats]
+        Tweak1[Executes powercfg commands]
+        Clean[Flushes DNS & Deletes Temp Files]
+        
+        BatExec --> ASCII
+        ASCII <--> WMI
+        ASCII --> Tweak1
+        ASCII --> Clean
     end
 
-    subgraph Developer Web Dashboard
-        Web --> NPM[npm install & npm run dev]
-        NPM --> Express[Express.js Backend Port 3001]
-        NPM --> React[React Vite Frontend Port 5173]
-        Express <--> SystemInfo[npm systeminformation hardware polling]
+    subgraph Web[Developer Web Dashboard]
+        NPM[npm install & npm run dev]
+        Express[Express.js Backend Port 3001]
+        React[React Vite Frontend Port 5173]
+        SystemInfo[npm systeminformation hardware polling]
+        BrowserUI[Beautiful Glassmorphic UI in Browser]
+        
+        NPM --> Express
+        NPM --> React
+        Express <--> SystemInfo
         React <--> Express
-        React -.-> BrowserUI[Beautiful Glassmorphic UI in Browser]
+        React -.-> BrowserUI
     end
 ```
 
